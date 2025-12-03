@@ -310,6 +310,59 @@ body {
   color: var(--nn-text-muted);
 }
 
+/* Publications / papers section */
+.nn-paper-list {
+  max-width: 60rem;
+  margin: 2.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nn-paper {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--nn-border-subtle);
+}
+
+.nn-paper:last-child {
+  border-bottom: none;
+}
+
+.nn-paper-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  color: var(--nn-accent-cyan);
+}
+
+.nn-paper-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.nn-paper-citation {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.9rem;
+  color: var(--nn-text-muted);
+}
+
+.nn-paper-summary {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+}
+
+.nn-paper-links a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--nn-accent-cyan);
+  border-bottom: 1px solid transparent;
+}
+
+.nn-paper-links a:hover {
+  border-bottom-color: var(--nn-accent-cyan);
+}
+
 /* Applications */
 
 .nn-app-grid {
