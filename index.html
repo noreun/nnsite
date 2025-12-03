@@ -118,7 +118,7 @@
               Demonstrates that sub-second noradrenaline estimates can be obtained from
               standard depth electrodes in human amygdala, and that noradrenaline
               responses scale with emotional arousal and attentional salience while
-              covarying with pupil dilation. :contentReference[oaicite:0]{index=0}
+              covarying with pupil dilation.
             </p>
             <p class="nn-paper-links">
               <a href="https://doi.org/10.1016/j.cub.2023.09.074" target="_blank" rel="noopener">
@@ -138,7 +138,7 @@
             <p class="nn-paper-summary">
               Uses a motion discrimination task to show that serotonin in caudate
               tracks sensory uncertainty and that both dopamine and serotonin encode
-              task statistics and decision timing in human striatum. :contentReference[oaicite:1]{index=1}
+              task statistics and decision timing in human striatum.
             </p>
             <p class="nn-paper-links">
               <a href="https://doi.org/10.1016/j.neuron.2020.09.015" target="_blank" rel="noopener">
@@ -159,7 +159,7 @@
               Records dopamine in human striatum during a sequential investment task
               and shows that dopamine signals combine standard reward prediction
               errors with counterfactual “what could have happened” information,
-              rather than encoding simple RPEs alone. :contentReference[oaicite:2]{index=2}
+              rather than encoding simple RPEs alone.
             </p>
             <p class="nn-paper-links">
               <a href="https://doi.org/10.1073/pnas.1513619112" target="_blank" rel="noopener">
@@ -216,30 +216,53 @@
         <div>
           <h2>Contact</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
-            consectetur diam. Integer sagittis tortor id lorem consequat, id convallis
-            felis bibendum.
+            We are actively seeking research collaborators and pilot study partners
+            to help validate and expand the applications of our neurotechnology.
           </p>
           <p class="nn-contact-highlight">
             Ready to explore a collaboration or pilot study?
           </p>
         </div>
         <div>
-          <form class="nn-form">
+          <form
+            class="nn-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <!-- Required hidden form-name field -->
+            <input type="hidden" name="form-name" value="contact">
+
+            <!-- Honeypot spam trap (hidden from real users) -->
+            <p style="display:none;">
+              <label>Don’t fill this out: <input name="bot-field"></label>
+            </p>
+
             <div class="nn-form-row">
               <label for="name">Name</label>
-              <input id="name" type="text" name="name" placeholder="Jane Doe">
+              <input id="name" type="text" name="name" placeholder="Jane Doe" required>
             </div>
+
             <div class="nn-form-row">
               <label for="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="name@example.com">
+              <input id="email" type="email" name="email" placeholder="name@example.com" required>
             </div>
+
             <div class="nn-form-row">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Lorem ipsum dolor sit amet..."></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="..."
+                required
+              ></textarea>
             </div>
+
             <button type="submit" class="nn-button nn-button-primary">Send message</button>
           </form>
+
         </div>
       </div>
     </section>
