@@ -1,0 +1,454 @@
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+}
+
+/* Theme variables */
+:root {
+  --nn-bg: #ffffff;
+  --nn-bg-alt: #f5f5f7;
+  --nn-text-main: #111111;
+  --nn-text-muted: #555555;
+  --nn-border-subtle: #e5e5ea;
+  --nn-accent-cyan: #00bcd4;
+  --nn-accent-magenta: #ff4fa3;
+  --nn-radius-lg: 18px;
+  --nn-radius-md: 12px;
+  --nn-radius-pill: 999px;
+  --nn-shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.06);
+  --nn-max-width: 1080px;
+}
+
+/* Layout helpers */
+
+.nn-container {
+  max-width: var(--nn-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nn-section {
+  padding: 5rem 0;
+}
+
+.nn-section-alt {
+  background-color: var(--nn-bg-alt);
+}
+
+.nn-section-header {
+  max-width: 640px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.nn-section-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.nn-section-header p {
+  margin: 0;
+  color: var(--nn-text-muted);
+}
+
+/* Header */
+
+.nn-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(229, 229, 234, 0.9);
+}
+
+.nn-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.5rem;
+}
+
+.nn-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 0.5rem;
+}
+
+.nn-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nn-logo-text {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+}
+
+.nn-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.nn-nav a {
+  text-decoration: none;
+  color: var(--nn-text-muted);
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.nn-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--nn-accent-cyan), var(--nn-accent-magenta));
+  transition: width 0.18s ease-out;
+}
+
+.nn-nav a:hover {
+  color: var(--nn-text-main);
+}
+
+.nn-nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+
+.nn-hero {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+.nn-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.nn-hero-text h1 {
+  font-size: clamp(2.6rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0 0 1.25rem 0;
+}
+
+.nn-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.76rem;
+  color: var(--nn-accent-cyan);
+  margin-bottom: 0.9rem;
+}
+
+.nn-hero-subtitle {
+  max-width: 34rem;
+  color: var(--nn-text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.nn-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Buttons */
+
+.nn-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--nn-radius-pill);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background 0.1s ease-out, color 0.1s ease-out;
+}
+
+.nn-button-primary {
+  background: linear-gradient(135deg, var(--nn-accent-cyan), var(--nn-accent-magenta));
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.nn-button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.nn-button-ghost {
+  border-color: var(--nn-border-subtle);
+  color: var(--nn-text-main);
+  background-color: #ffffff;
+}
+
+.nn-button-ghost:hover {
+  border-color: var(--nn-accent-cyan);
+}
+
+/* Hero card */
+
+.nn-hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.nn-hero-card {
+  background-color: #ffffff;
+  border-radius: var(--nn-radius-lg);
+  padding: 1.75rem 1.6rem;
+  box-shadow: var(--nn-shadow-soft);
+  border: 1px solid var(--nn-border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.nn-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 0% 0%, rgba(0, 188, 212, 0.12), transparent 55%),
+              radial-gradient(circle at 100% 100%, rgba(255, 79, 163, 0.12), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.nn-hero-card h2 {
+  position: relative;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.4rem;
+}
+
+.nn-hero-card p {
+  position: relative;
+  margin: 0 0 1.2rem 0;
+  color: var(--nn-text-muted);
+}
+
+.nn-badges {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nn-badges li {
+  border-radius: var(--nn-radius-pill);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.78rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+/* Two column grids */
+
+.nn-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Lists */
+
+.nn-list {
+  padding-left: 1.2rem;
+  margin: 0.75rem 0 0 0;
+  color: var(--nn-text-muted);
+}
+
+/* Cards */
+
+.nn-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.nn-card {
+  border-radius: var(--nn-radius-md);
+  padding: 1.5rem 1.4rem;
+  border: 1px solid var(--nn-border-subtle);
+  background-color: #ffffff;
+}
+
+.nn-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.nn-card p {
+  margin: 0;
+  color: var(--nn-text-muted);
+}
+
+/* Applications */
+
+.nn-app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.nn-app-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.nn-app-item p {
+  margin: 0;
+  color: var(--nn-text-muted);
+}
+
+/* Contact */
+
+.nn-contact {
+  border-top: 1px solid var(--nn-border-subtle);
+}
+
+.nn-contact-highlight {
+  margin-top: 1.2rem;
+  font-weight: 500;
+  color: var(--nn-accent-magenta);
+}
+
+.nn-form {
+  border-radius: var(--nn-radius-lg);
+  padding: 1.5rem 1.4rem 1.6rem 1.4rem;
+  background-color: #ffffff;
+  border: 1px solid var(--nn-border-subtle);
+  box-shadow: var(--nn-shadow-soft);
+}
+
+.nn-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.nn-form-row label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--nn-text-muted);
+}
+
+.nn-form-row input,
+.nn-form-row textarea {
+  border-radius: 999px;
+  border: 1px solid #d1d1d6;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, border-radius 0.1s ease-out;
+}
+
+.nn-form-row textarea {
+  border-radius: 16px;
+  resize: vertical;
+  min-height: 130px;
+}
+
+.nn-form-row input:focus,
+.nn-form-row textarea:focus {
+  border-color: var(--nn-accent-cyan);
+  box-shadow: 0 0 0 1px rgba(0, 188, 212, 0.4);
+}
+
+/* Footer */
+
+.nn-footer {
+  border-top: 1px solid var(--nn-border-subtle);
+  padding: 1.5rem 0 2rem 0;
+  background-color: #ffffff;
+}
+
+.nn-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--nn-text-muted);
+}
+
+.nn-footer-accent {
+  color: var(--nn-accent-cyan);
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .nn-hero-grid,
+  .nn-grid-2,
+  .nn-card-grid,
+  .nn-app-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nn-header-inner {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .nn-nav {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .nn-hero {
+    padding-top: 4.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nn-header-inner {
+    padding-inline: 1rem;
+  }
+
+  .nn-nav {
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 0.82rem;
+  }
+
+  .nn-section {
+    padding: 3.5rem 0;
+  }
+
+  .nn-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
