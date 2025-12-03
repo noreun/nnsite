@@ -272,5 +272,15 @@
       <p class="nn-footer-accent">Built for the next decade of neuroscience.</p>
     </div>
   </footer>
+
+<script>
+  // Clear form values on page load (prevents back-button caching)
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+      document.querySelectorAll("form").forEach(f => f.reset());
+    }
+  });
+</script>
+
 </body>
 </html>
