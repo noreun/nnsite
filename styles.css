@@ -152,7 +152,7 @@ body {
 }
 
 .nn-hero-text h1 {
-  font-size: clamp(3rem, 5vw, 4.2rem);
+  font-size: clamp(2.6rem, 4vw, 3.4rem);
   line-height: 1.1;
   margin: 0 0 1.25rem 0;
 }
@@ -160,7 +160,7 @@ body {
 .nn-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.76rem;
+  font-size: 0.9rem;
   color: var(--nn-accent-cyan);
   margin-bottom: 0.9rem;
 }
@@ -508,6 +508,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
