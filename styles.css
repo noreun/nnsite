@@ -160,7 +160,7 @@ body {
 .nn-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: var(--nn-accent-cyan);
   margin-bottom: 0.9rem;
 }
@@ -508,6 +508,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
