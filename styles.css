@@ -92,14 +92,15 @@ body {
 }
 
 .nn-logo {
-  height: 40px;
+  height: 80px;
   width: auto;
 }
 
-.nn-logo-text {
+..nn-logo-text {
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: 0.78rem;
+  font-size: 1.6rem;   /* Much larger */
+  font-weight: 600;
 }
 
 .nn-nav {
@@ -505,3 +506,4 @@ body {
     align-items: flex-start;
   }
 }
+
