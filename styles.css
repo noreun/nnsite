@@ -114,7 +114,7 @@ body {
   color: var(--nn-text-muted);
   position: relative;
   padding-bottom: 0.25rem;
-  font-size: 1.2rem;  /* increase from default 0.9rem */
+  font-size: 0.9rem;  /* increase from default 0.9rem */
   font-weight: 500;   /* optional: make it slightly bolder */
 }
 
@@ -508,6 +508,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
