@@ -106,7 +106,7 @@ body {
 .nn-nav {
   display: flex;
   gap: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .nn-nav a {
@@ -508,6 +508,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
