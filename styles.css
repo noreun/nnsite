@@ -169,6 +169,7 @@ body {
   max-width: 34rem;
   color: var(--nn-text-muted);
   margin-bottom: 1.75rem;
+  font-size: 0.9rem;
 }
 
 .nn-hero-actions {
@@ -508,6 +509,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
