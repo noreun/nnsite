@@ -49,6 +49,10 @@ body {
   background-color: var(--nn-bg-alt);
 }
 
+.nn-section-lavender {
+  background-color: #f3f1fa; /* soft lavender */
+}
+
 .nn-section-header {
   max-width: 640px;
   margin: 0 auto 3rem auto;
@@ -509,6 +513,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
