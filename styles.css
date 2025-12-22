@@ -371,6 +371,32 @@ body {
   border-bottom-color: var(--nn-accent-cyan);
 }
 
+/* People */
+
+.nn-person {
+  text-align: center;
+}
+
+.nn-person img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.nn-person-role {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--nn-text-muted);
+  margin: 0.25rem 0 0.4rem 0;
+}
+
+.nn-person-bio {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--nn-text-muted);
+}
+
 /* Applications */
 
 .nn-app-grid {
@@ -513,6 +539,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
