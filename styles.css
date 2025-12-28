@@ -373,6 +373,27 @@ body {
 
 /* People */
 
+.nn-people-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--nn-text-muted);
+  max-width: 520px;
+  margin: 0.5rem auto 2rem auto;
+  text-align: center;
+  position: relative;
+}
+
+.nn-people-subtitle::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--nn-accent-cyan);
+  margin: 0.75rem auto 0 auto;
+  opacity: 0.6;
+}
+
+
 .nn-person {
   text-align: center;
 }
@@ -545,6 +566,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
