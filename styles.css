@@ -374,6 +374,7 @@ body {
 /* People */
 
 .nn-section-header {
+  display: block; 
   text-align: center;
 }
 
@@ -570,6 +571,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
