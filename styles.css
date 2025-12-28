@@ -373,6 +373,10 @@ body {
 
 /* People */
 
+.nn-section-header {
+  text-align: center;
+}
+
 .nn-people-subtitle {
   font-size: 1.15rem;
   font-weight: 400;
@@ -566,6 +570,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
