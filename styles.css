@@ -397,6 +397,12 @@ body {
   color: var(--nn-text-muted);
 }
 
+.nn-person {
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* Applications */
 
 .nn-app-grid {
@@ -539,6 +545,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
