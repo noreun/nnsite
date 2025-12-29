@@ -473,6 +473,23 @@ body {
   color: var(--nn-text-muted);
 }
 
+.nn-press-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--nn-accent-cyan);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.nn-press-link:hover {
+  color: var(--nn-accent-magenta);
+  border-bottom-color: var(--nn-accent-magenta);
+}
+
+
 
 /* Contact */
 
@@ -598,6 +615,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
