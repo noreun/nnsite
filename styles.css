@@ -429,23 +429,50 @@ body {
   text-align: center;
 }
 
-/* Applications */
+/* In the Press */
 
-.nn-app-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+.nn-press-list {
+  max-width: 60rem;
+  margin: 2.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
-.nn-app-item h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+.nn-press-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--nn-border-subtle);
 }
 
-.nn-app-item p {
-  margin: 0;
+.nn-press-item:last-child {
+  border-bottom: none;
+}
+
+.nn-press-item img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.nn-press-content {
+  flex: 1;
+}
+
+.nn-press-title {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.nn-press-date {
+  font-size: 0.85rem;
   color: var(--nn-text-muted);
 }
+
 
 /* Contact */
 
@@ -571,6 +598,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
