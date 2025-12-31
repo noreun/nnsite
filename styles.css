@@ -303,32 +303,9 @@ body {
   border-radius: inherit;
 }
 
-/* Controls overlay */
-.nn-video-controls {
-  position: absolute;
-  bottom: 0.8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 0.4rem 0.6rem;
-  border-radius: 0.5rem;
-}
-
-.nn-video-controls button {
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  border-radius: 0.3rem;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-
-.nn-video-controls button:hover {
-  background: rgba(255, 255, 255, 1);
+/* Optional: hover effect to highlight the video card */
+.nn-video-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 /* Optional responsive tweak: shrink video on small screens */
@@ -678,6 +655,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
