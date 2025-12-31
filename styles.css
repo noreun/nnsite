@@ -370,14 +370,15 @@ body {
 /* format picture in about section */
 
 .nn-tech-image {
-  margin: 1.75rem auto;
-  max-width: 520px;
-  text-align: center;
+  margin: 1.5rem auto;
+  max-width: 380px;   /* MUCH smaller */
 }
 
 .nn-tech-image img {
+  display: block;     /* critical */
   width: 100%;
   height: auto;
+  margin: 0 auto;     /* force centering */
   border-radius: var(--nn-radius-lg);
   box-shadow: var(--nn-shadow-soft);
 }
@@ -679,6 +680,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
