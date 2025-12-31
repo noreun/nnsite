@@ -368,6 +368,47 @@ body {
   color: var(--nn-text-muted);
 }
 
+/*about section formatting (there may be some above but I can't tell so i'm making new...)*/
+
+.nn-about-intro {
+  max-width: 720px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.nn-about-intro h2 {
+  margin-bottom: 1.25rem;
+}
+
+.nn-about-principles {
+  max-width: 720px;
+  margin: 0 auto 2.5rem auto;
+  padding: 1.75rem 2rem;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: var(--nn-radius-lg);
+}
+
+.nn-about-divider {
+  width: 120px;
+  height: 2px;
+  margin: 3rem auto;
+  background: linear-gradient(
+    90deg,
+    var(--nn-accent-cyan),
+    var(--nn-accent-magenta)
+  );
+  opacity: 0.7;
+}
+
+#about h3 {
+  margin-top: 3.5rem;
+}
+
+#about p,
+#about ol {
+  max-width: 760px;
+}
+
 /* format picture in about section */
 
 .nn-inline-figure {
@@ -678,6 +719,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
