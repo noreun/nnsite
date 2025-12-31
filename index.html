@@ -30,42 +30,63 @@
   </header>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="nn-section nn-hero">
-      <div class="nn-container nn-hero-grid">
-        <div class="nn-hero-text">
-          <p class="nn-eyebrow">Next generation brain sensing</p>
-          <h1> Translating brain chemistry into human potential.</h1>
-          <p class="nn-hero-subtitle">
-           We’ve developed real-time neurotransmitter sensing technology that empowers 
-           researchers, clinicians, and everyday people to unlock new possibilities.
-          </p>
-          <div class="nn-hero-actions">
-            <a href="#contact" class="nn-button nn-button-primary">Get in touch</a>
-            <a href="#technology" class="nn-button nn-button-ghost">Learn more</a>
-          </div>
-        </div>
-        <!-- RIGHT: VIDEO CARD -->
-      <div class="nn-hero-visual">
-        <div class="nn-hero-card nn-video-card">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            controls
-          >
-            <source src="Nebula_Intro_No_Mark_restored_Used.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+  <!-- HERO -->
+  <section class="nn-section nn-hero">
+    <div class="nn-container nn-hero-grid">
+      <div class="nn-hero-text">
+        <p class="nn-eyebrow">Next generation brain sensing</p>
+        <h1> Translating brain chemistry into human potential.</h1>
+        <p class="nn-hero-subtitle">
+          We’ve developed real-time neurotransmitter sensing technology that empowers 
+          researchers, clinicians, and everyday people to unlock new possibilities.
+        </p>
+        <div class="nn-hero-actions">
+          <a href="#contact" class="nn-button nn-button-primary">Get in touch</a>
+          <a href="#technology" class="nn-button nn-button-ghost">Learn more</a>
         </div>
       </div>
 
+      <!-- RIGHT: VIDEO CARD -->
+      <div class="nn-hero-visual">
+        <div class="nn-hero-card nn-video-card">
+          <video id="heroVideo" autoplay muted loop playsinline preload="auto">
+            <source src="Nebula_Intro_No_Mark_restored_Used.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Custom Controls Overlay -->
+          <div class="nn-video-controls">
+            <button id="playPauseBtn">Pause</button>
+            <button id="muteBtn">Unmute</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
+<script>
+  const video = document.getElementById('heroVideo');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const muteBtn = document.getElementById('muteBtn');
+
+  playPauseBtn.addEventListener('click', () => {
+    if(video.paused){
+      video.play();
+      playPauseBtn.textContent = 'Pause';
+    } else {
+      video.pause();
+      playPauseBtn.textContent = 'Play';
+    }
+  });
+
+  muteBtn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? 'Unmute' : 'Mute';
+  });
+</script>
+
+  
     <!-- ABOUT -->
     <section id="about" class="nn-section nn-section-lavender">
       <div class="nn-container">
@@ -684,6 +705,7 @@
 
 </body>
 </html>
+
 
 
 
