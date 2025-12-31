@@ -171,9 +171,10 @@ body {
 
 .nn-hero-subtitle {
   max-width: 34rem;
-  color: var(--nn-text-muted);
   margin-bottom: 1.75rem;
   font-size: 1.1rem;
+  color: var(--nn-accent-magenta);
+  opacity: 0.9; /* softens it just a bit */
 }
 
 .nn-hero-actions {
@@ -677,6 +678,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
