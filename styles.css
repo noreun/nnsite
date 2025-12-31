@@ -276,7 +276,7 @@ body {
   background: rgba(255, 255, 255, 0.94);
 }
 
-/* Hero video card with controls */
+/* Hero video card */
 .nn-hero-visual {
   display: flex;
   justify-content: center;
@@ -284,11 +284,11 @@ body {
 }
 
 .nn-video-card {
-  position: relative; /* needed for overlay controls */
+  position: relative;
   padding: 0;
   overflow: hidden;
   width: 100%;
-  max-width: 650px;       /* increased from 500px for larger video */
+  max-width: 850px;       /* increased from 650px to make video bigger */
   aspect-ratio: 16 / 9;   /* keeps video widescreen */
   border-radius: var(--nn-radius-lg);
   box-shadow: var(--nn-shadow-soft);
@@ -307,6 +307,15 @@ body {
 .nn-video-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
+
+/* Optional: adjust the hero grid to give more space to video */
+.nn-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 3fr); /* made right column wider */
+  gap: 3rem;
+  align-items: center;
+}
+
 
 /* Optional responsive tweak: shrink video on small screens */
 @media (max-width: 768px) {
@@ -655,6 +664,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
