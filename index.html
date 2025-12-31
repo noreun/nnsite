@@ -46,45 +46,26 @@
         </div>
       </div>
 
-      <!-- RIGHT: VIDEO CARD -->
+      <!-- RIGHT: Video -->
       <div class="nn-hero-visual">
         <div class="nn-hero-card nn-video-card">
-          <video id="heroVideo" autoplay muted loop playsinline preload="auto">
+          <video
+            id="heroVideo"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            controls
+          >
             <source src="Nebula_Intro_No_Mark_restored_Used.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-
-          <!-- Custom Controls Overlay -->
-          <div class="nn-video-controls">
-            <button id="playPauseBtn">Pause</button>
-            <button id="muteBtn">Unmute</button>
-          </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-
-<script>
-  const video = document.getElementById('heroVideo');
-  const playPauseBtn = document.getElementById('playPauseBtn');
-  const muteBtn = document.getElementById('muteBtn');
-
-  playPauseBtn.addEventListener('click', () => {
-    if(video.paused){
-      video.play();
-      playPauseBtn.textContent = 'Pause';
-    } else {
-      video.pause();
-      playPauseBtn.textContent = 'Play';
-    }
-  });
-
-  muteBtn.addEventListener('click', () => {
-    video.muted = !video.muted;
-    muteBtn.textContent = video.muted ? 'Unmute' : 'Mute';
-  });
-</script>
 
   
     <!-- ABOUT -->
@@ -705,6 +686,7 @@
 
 </body>
 </html>
+
 
 
 
