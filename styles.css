@@ -279,17 +279,11 @@ body {
 .nn-video-card {
   padding: 0;
   overflow: hidden;
-}
 
-.nn-video-card {
-  padding: 0;
-  overflow: hidden;
+  width: 560px;
+  height: 315px; /* explicit height fixes the crop issue */
 
-  width: 100%;
-  max-width: 560px;   /* wider */
-  max-height: 315px;  /* taller — true 16:9 */
-
-  aspect-ratio: 16 / 9;
+  border-radius: var(--nn-radius-lg);
 }
 
 /* Two column grids */
@@ -631,6 +625,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
