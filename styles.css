@@ -370,7 +370,7 @@ body {
 /* format picture in about section */
 
 .nn-inline-figure {
-  max-width: 640px;     /* matches typical paragraph width */
+  max-width: 700px;     /* matches typical paragraph width */
   width: 100%;
   margin: 2rem auto;    /* center it */
 }
@@ -678,6 +678,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
