@@ -219,75 +219,44 @@ body {
   border-color: var(--nn-accent-cyan);
 }
 
-/* Hero card */
+<main id="top">
+  <!-- HERO -->
+  <section class="nn-section nn-hero">
+    <div class="nn-container nn-hero-grid">
 
-.nn-hero-visual {
-  display: flex;
-  justify-content: center;
-}
+      <!-- LEFT: TEXT -->
+      <div class="nn-hero-text">
+        <p class="nn-eyebrow">Next generation brain sensing</p>
+        <h1>Translating brain chemistry into human potential.</h1>
+        <p class="nn-hero-subtitle">
+          We’ve developed real-time neurotransmitter sensing technology that empowers
+          researchers, clinicians, and everyday people to unlock new possibilities.
+        </p>
+        <div class="nn-hero-actions">
+          <a href="#contact" class="nn-button nn-button-primary">Get in touch</a>
+          <a href="#technology" class="nn-button nn-button-ghost">Learn more</a>
+        </div>
+      </div>
 
-.nn-hero-card {
-  background-color: #ffffff;
-  border-radius: var(--nn-radius-lg);
-  padding: 1.75rem 1.6rem;
-  box-shadow: var(--nn-shadow-soft);
-  border: 1px solid var(--nn-border-subtle);
-  position: relative;
-  overflow: hidden;
-}
+      <!-- RIGHT: VIDEO CARD -->
+      <div class="nn-hero-visual">
+        <div class="nn-hero-card nn-video-card">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+          >
+            <source src="Nebula_Intro_No_Mark_restored_Used.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
 
-.nn-hero-card::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background: radial-gradient(circle at 0% 0%, rgba(0, 188, 212, 0.12), transparent 55%),
-              radial-gradient(circle at 100% 100%, rgba(255, 79, 163, 0.12), transparent 55%);
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.nn-hero-card h2 {
-  position: relative;
-  margin: 0 0 0.75rem 0;
-  font-size: 1.4rem;
-}
-
-.nn-hero-card p {
-  position: relative;
-  margin: 0 0 1.2rem 0;
-  color: var(--nn-text-muted);
-}
-
-.nn-badges {
-  position: relative;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.nn-badges li {
-  border-radius: var(--nn-radius-pill);
-  padding: 0.25rem 0.75rem;
-  font-size: 0.78rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background: rgba(255, 255, 255, 0.94);
-}
-
-.nn-video-card {
-  padding: 0;
-  overflow: hidden;
-}
-
-.nn-video-card video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* fills the card nicely */
-  display: block;
-  border-radius: inherit;
-}
+    </div>
+  </section>
+</main>
 
 /* Two column grids */
 
@@ -628,6 +597,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
