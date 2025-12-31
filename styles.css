@@ -281,12 +281,15 @@ body {
   overflow: hidden;
 }
 
-nn-video-card {
+.nn-video-card {
   padding: 0;
   overflow: hidden;
+
   width: 100%;
-  max-width: 420px;        /* controls how big the card gets */
-  aspect-ratio: 16 / 9;   /* key fix */
+  max-width: 440px;     /* controls horizontal size */
+  max-height: 260px;    /* THIS fixes the runaway height */
+
+  aspect-ratio: 16 / 9;
 }
 
 /* Two column grids */
@@ -628,6 +631,7 @@ nn-video-card {
     align-items: flex-start;
   }
 }
+
 
 
 
