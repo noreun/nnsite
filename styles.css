@@ -454,11 +454,10 @@ body {
 .nn-people-subtitle::after {
   content: "";
   display: block;
-  width: 48px;
+  width: 48px; /* fixed width */
   height: 2px;
-  background-color: var(--nn-accent-cyan);
   margin: 0.75rem auto 0 auto;
-  opacity: 0.6;
+  background: linear-gradient(90deg, var(--nn-accent-cyan), var(--nn-accent-magenta));
 }
 
 
@@ -678,6 +677,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
