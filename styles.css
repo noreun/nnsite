@@ -369,18 +369,16 @@ body {
 
 /* format picture in about section */
 
-.nn-tech-image {
-  margin: 2rem auto;
-  max-width: 34rem;   /* matches your text line length */
+.nn-inline-figure {
+  max-width: 92%;        /* slightly smaller than text width */
+  margin: 2rem auto;     /* space above/below + center */
 }
 
-.nn-tech-image img {
-  display: block;
+.nn-inline-figure img {
   width: 100%;
-  height: auto;       /* preserves aspect ratio */
-  margin: 0 auto;
-  border-radius: var(--nn-radius-lg);
-  box-shadow: var(--nn-shadow-soft);
+  height: auto;          /* CRITICAL: keeps proportions */
+  display: block;
+  border-radius: 0.75rem;
 }
 
 /* Publications / papers section */
@@ -680,6 +678,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
