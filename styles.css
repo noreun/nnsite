@@ -367,6 +367,21 @@ body {
   color: var(--nn-text-muted);
 }
 
+/* format picture in about section */
+
+.nn-tech-image {
+  margin: 1.75rem auto;
+  max-width: 520px;
+  text-align: center;
+}
+
+.nn-tech-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--nn-radius-lg);
+  box-shadow: var(--nn-shadow-soft);
+}
+
 /* Publications / papers section */
 .nn-paper-list {
   max-width: 60rem;
@@ -664,6 +679,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
