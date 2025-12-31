@@ -288,7 +288,7 @@ body {
   padding: 0;
   overflow: hidden;
   width: 100%;
-  max-width: 500px;       /* adjust max size as needed */
+  max-width: 650px;       /* increased from 500px for larger video */
   aspect-ratio: 16 / 9;   /* keeps video widescreen */
   border-radius: var(--nn-radius-lg);
   box-shadow: var(--nn-shadow-soft);
@@ -330,6 +330,14 @@ body {
 .nn-video-controls button:hover {
   background: rgba(255, 255, 255, 1);
 }
+
+/* Optional responsive tweak: shrink video on small screens */
+@media (max-width: 768px) {
+  .nn-video-card {
+    max-width: 100%;
+  }
+}
+
 
 /* Two column grids */
 
@@ -670,6 +678,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
