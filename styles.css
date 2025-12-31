@@ -286,8 +286,8 @@ body {
   overflow: hidden;
 
   width: 100%;
-  max-width: 440px;     /* controls horizontal size */
-  max-height: 260px;    /* THIS fixes the runaway height */
+  max-width: 560px;   /* wider */
+  max-height: 315px;  /* taller — true 16:9 */
 
   aspect-ratio: 16 / 9;
 }
@@ -631,6 +631,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
