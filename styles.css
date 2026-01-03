@@ -370,6 +370,16 @@ body {
 
 /*about section formatting (there may be some above but I can't tell so i'm making new...)*/
 
+#about {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  #about {
+    scroll-margin-top: 90px;
+  }
+}
+
 .nn-about-intro {
   max-width: 720px;
   margin: 0 auto 3rem auto;
@@ -725,6 +735,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
