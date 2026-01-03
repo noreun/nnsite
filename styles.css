@@ -411,7 +411,8 @@ body {
 
 .nn-about-body {
   max-width: 860px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* format picture in about section */
@@ -724,6 +725,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
