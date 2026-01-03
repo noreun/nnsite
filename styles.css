@@ -1,3 +1,15 @@
+/* control where page lands with buttons */
+
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 90px;
+  }
+}
+
 /* Basic reset */
 *,
 *::before,
@@ -735,6 +747,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
