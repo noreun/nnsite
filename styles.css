@@ -749,18 +749,11 @@ body {
 }
 
 /* to make things render better on phone */
-
 @media (max-width: 768px) {
 
   /* ----------------------------
      HEADER / NAV
   ---------------------------- */
-
-  .nn-about-intro p {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
 
   .nn-header-inner {
     flex-direction: column;
@@ -771,14 +764,14 @@ body {
   .nn-nav {
     width: 100%;
     justify-content: space-between;
-    flex-wrap: nowrap;           /* keep nav on one line */
-    overflow-x: auto;            /* allow gentle horizontal scroll */
+    flex-wrap: nowrap;
+    overflow-x: auto;
     padding-bottom: 0.25rem;
   }
 
   .nn-nav a {
     font-size: 0.95rem;
-    white-space: nowrap;         /* prevent word wrapping */
+    white-space: nowrap;
   }
 
   /* ----------------------------
@@ -794,7 +787,12 @@ body {
     padding: 3.5rem 0;
   }
 
-  /* ABOUT: add breathing room on sides */
+  /* ABOUT */
+  .nn-about-intro p {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .nn-about-body {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -805,13 +803,16 @@ body {
     max-width: 100%;
   }
 
-  /* PEOPLE: prevent image clipping */
+  /* ----------------------------
+     PEOPLE
+  ---------------------------- */
+
   .nn-person {
     max-width: 100%;
   }
 
   .nn-person img {
-    width: 120px;          /* slightly smaller on phones */
+    width: 120px;
     max-width: 100%;
     height: auto;
     margin-left: auto;
@@ -819,12 +820,12 @@ body {
     display: block;
   }
 
-  /* Ensure people grid stacks cleanly */
   .nn-grid-2,
   .nn-card-grid {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
