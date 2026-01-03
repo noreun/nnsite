@@ -748,6 +748,78 @@ body {
   }
 }
 
+/* to make things render better on phone */
+
+@media (max-width: 768px) {
+
+  /* ----------------------------
+     HEADER / NAV
+  ---------------------------- */
+
+  .nn-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .nn-nav {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;           /* keep nav on one line */
+    overflow-x: auto;            /* allow gentle horizontal scroll */
+    padding-bottom: 0.25rem;
+  }
+
+  .nn-nav a {
+    font-size: 0.95rem;
+    white-space: nowrap;         /* prevent word wrapping */
+  }
+
+  /* ----------------------------
+     GLOBAL SPACING
+  ---------------------------- */
+
+  .nn-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .nn-section {
+    padding: 3.5rem 0;
+  }
+
+  /* ----------------------------
+     PEOPLE SECTION FIX
+  ---------------------------- */
+
+  .nn-card-grid {
+    grid-template-columns: 1fr;  /* stack people vertically */
+  }
+
+  .nn-person {
+    max-width: 100%;
+  }
+
+  .nn-person img {
+    width: 180px;                /* slightly larger */
+    height: auto;
+    object-fit: contain;         /* NEVER crop faces */
+  }
+
+  /* ----------------------------
+     ABOUT BODY WIDTH
+  ---------------------------- */
+
+  .nn-about-body {
+    max-width: 100%;
+  }
+
+  #about p,
+  #about ol {
+    max-width: 100%;
+  }
+}
+
 
 
 
