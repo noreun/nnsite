@@ -788,35 +788,35 @@ body {
     padding: 3.5rem 0;
   }
 
-  /* ----------------------------
-     PEOPLE SECTION FIX
-  ---------------------------- */
-
-  .nn-card-grid {
-    grid-template-columns: 1fr;  /* stack people vertically */
-  }
-
-  .nn-person {
-    max-width: 100%;
-  }
-
-  .nn-person img {
-    width: 180px;                /* slightly larger */
-    height: auto;
-    object-fit: contain;         /* NEVER crop faces */
-  }
-
-  /* ----------------------------
-     ABOUT BODY WIDTH
-  ---------------------------- */
-
+  /* ABOUT: add breathing room on sides */
   .nn-about-body {
-    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   #about p,
   #about ol {
     max-width: 100%;
+  }
+
+  /* PEOPLE: prevent image clipping */
+  .nn-person {
+    max-width: 100%;
+  }
+
+  .nn-person img {
+    width: 120px;          /* slightly smaller on phones */
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  /* Ensure people grid stacks cleanly */
+  .nn-grid-2,
+  .nn-card-grid {
+    grid-template-columns: 1fr;
   }
 }
 
