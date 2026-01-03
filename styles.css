@@ -404,10 +404,10 @@ body {
   margin-top: 3.5rem;
 }
 
-#about p,
+/*#about p,
 #about ol {
   max-width: 760px;
-}
+}> */
 
 .nn-about-body {
   max-width: 860px;
@@ -725,6 +725,7 @@ body {
     align-items: flex-start;
   }
 }
+
 
 
 
