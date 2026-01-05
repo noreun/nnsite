@@ -648,19 +648,7 @@
           </p>
         </div>
         <div>
-          <form
-            class="nn-form"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/thanks.html"
-          >
-            <input type="hidden" name="form-name" value="contact">
-
-            <p style="display:none;">
-              <label>Don’t fill this out: <input name="bot-field"></label>
-            </p>
+          <form class="nn-form" name="contact" id="contact-form" novalidate>
 
             <div class="nn-form-row">
               <label for="name">Name</label>
@@ -681,6 +669,10 @@
                 placeholder="..."
                 required
               ></textarea>
+            </div>
+
+            <div class="nn-form-row">
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAACKvu8J677VtDEl4"></div>
             </div>
 
             <button type="submit" class="nn-button nn-button-primary">Send message</button>
@@ -704,6 +696,80 @@
       document.querySelectorAll("form").forEach(f => f.reset());
     }
   });
+</script>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+(() => {
+  const WORKER_URL = "https://contact-api.nebulaneuro.workers.dev";
+
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  // Optional: inline status message (no CSS changes needed)
+  const status = document.createElement("div");
+  status.style.marginTop = "12px";
+  status.style.fontSize = "0.95rem";
+  form.appendChild(status);
+
+  const setStatus = (msg, ok) => {
+    status.textContent = msg;
+    status.style.opacity = msg ? "1" : "0";
+    status.style.color = ok ? "inherit" : "crimson";
+  };
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    setStatus("", true);
+
+    const name = form.querySelector('#name').value.trim();
+    const email = form.querySelector('#email').value.trim();
+    const message = form.querySelector('#message').value.trim();
+
+    // Turnstile writes a hidden input into the form
+    const token = form.querySelector('input[name="cf-turnstile-response"]')?.value || "";
+
+    if (!token) {
+      setStatus("Please complete the verification (Turnstile).", false);
+      return;
+    }
+
+    const btn = form.querySelector('button[type="submit"]');
+    const oldText = btn ? btn.textContent : "";
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+    }
+
+    try {
+      const resp = await fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message, turnstileToken: token }),
+      });
+
+      const data = await resp.json().catch(() => ({}));
+
+      if (resp.ok && data.ok) {
+        // Redirect to your existing thanks page
+        window.location.href = "/thanks.html";
+        return;
+      }
+
+      setStatus("Could not send message. Please try again later.", false);
+      if (window.turnstile) window.turnstile.reset();
+    } catch (err) {
+      setStatus("Network error. Please try again later.", false);
+      if (window.turnstile) window.turnstile.reset();
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = oldText;
+      }
+    }
+  });
+})();
 </script>
 
 </body>
