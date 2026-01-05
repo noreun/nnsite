@@ -535,11 +535,20 @@ body {
   text-align: center;
 }
 
-.nn-person img {
-  width: 149px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 0.75rem;
+.nn-person-photo {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 0.75rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #f5f5f7;
+}
+
+.nn-person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .nn-person-role {
@@ -817,13 +826,16 @@ body {
     max-width: 100%;
   }
 
-  .nn-person img {
+  .nn-person-photo {
     width: 120px;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    height: 120px;
+    margin: 0 auto 0.75rem auto;
+  }
+
+  .nn-person-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .nn-grid-2,
@@ -831,6 +843,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
