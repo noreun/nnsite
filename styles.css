@@ -538,9 +538,9 @@ body {
 .nn-person-photo {
   width: 160px;
   height: 160px;
-  margin: 0 auto 0.75rem auto;
+  border-radius: 50%;
   overflow: hidden;
-  border-radius: 12px;
+  margin: 0 auto 0.75rem auto;
   background-color: #f5f5f7;
 }
 
@@ -843,6 +843,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
