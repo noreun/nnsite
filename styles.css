@@ -546,7 +546,7 @@ body {
 
 /*change Read's photo only*/
 .nn-person-photo--read img {
-  object-position: 40% 35%;
+  object-position: 42% 38%;
 }
 
 .nn-person-photo img {
@@ -848,6 +848,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
