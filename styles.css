@@ -828,25 +828,37 @@ body {
   ---------------------------- */
 
   .nn-person {
-    max-width: 100%;
-  }
+  max-width: 220px;          /* slightly narrower card */
+  margin: 0 auto;
+}
 
-  .nn-person-photo {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 0.75rem auto;
-  }
+.nn-person-photo {
+  width: 140px;              /* larger than 120, smaller than desktop */
+  height: 140px;
+  margin: 0 auto 0.75rem auto;
+}
 
-  .nn-person-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.nn-person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .nn-grid-2,
-  .nn-card-grid {
-    grid-template-columns: 1fr;
-  }
+/* Improve long names (e.g., Cassie Efkeman, MBA) */
+.nn-person h3 {
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.nn-person-role {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+/* Force single-column layout */
+.nn-grid-2,
+.nn-card-grid {
+  grid-template-columns: 1fr;
 }
 
 
