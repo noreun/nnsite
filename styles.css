@@ -824,42 +824,65 @@ body {
   }
 
   /* ----------------------------
-     PEOPLE
-  ---------------------------- */
+   PEOPLE
+---------------------------- */
 
-  .nn-person {
-  max-width: 220px;          /* slightly narrower card */
-  margin: 0 auto;
+/* Ensure people cards never hit screen edges */
+#people {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  overflow-x: hidden;
 }
 
+/* Center rows safely inside viewport */
+.nn-card-row {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Individual person card */
+.nn-person {
+  max-width: 220px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Photo container */
 .nn-person-photo {
-  width: 140px;              /* larger than 120, smaller than desktop */
+  width: 140px;
   height: 140px;
   margin: 0 auto 0.75rem auto;
+  overflow: hidden;
 }
 
+/* Image fills container safely */
 .nn-person-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Improve long names (e.g., Cassie Efkeman, MBA) */
+/* Names: allow graceful wrap if absolutely needed */
 .nn-person h3 {
   font-size: 1.05rem;
   line-height: 1.25;
+  text-align: center;
 }
 
+/* Role text */
 .nn-person-role {
   font-size: 0.85rem;
   letter-spacing: 0.08em;
 }
 
-/* Force single-column layout */
+/* Force single-column layout on phone */
 .nn-grid-2,
 .nn-card-grid {
   grid-template-columns: 1fr;
 }
+
 
 
 
