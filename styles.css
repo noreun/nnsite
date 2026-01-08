@@ -547,23 +547,28 @@ body {
 .nn-card-row {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;            /* more breathing room */
   flex-wrap: nowrap;
 }
 
-/* Stack cleanly on tablet + phone */
-@media (max-width: 1024px) {
-  .nn-card-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
+/* ---------- Desktop-only refinements ---------- */
+@media (min-width: 961px) {
+
+  /* Allow names like Cassie / Leo to stay on one line */
+  .nn-person {
+    max-width: 260px;
+  }
+
+  .nn-person h3 {
+    white-space: nowrap;
+    font-size: 1.05rem;
   }
 }
 
 /* ---------- Person Card ---------- */
 
 .nn-person {
-  max-width: 240px;
+  max-width: 240px;       /* overridden on desktop above */
   margin: 0 auto;
   text-align: center;
 }
@@ -600,7 +605,6 @@ body {
   line-height: 1.5;
   color: var(--nn-text-muted);
 }
-
 
 /* In the Press */
 
@@ -914,6 +918,7 @@ body {
 .nn-card-grid {
   grid-template-columns: 1fr;
 }
+
 
 
 
